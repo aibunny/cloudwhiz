@@ -74,7 +74,7 @@ def get_reponse_from_query(query):
         Answer this question: {question}
         By searching the following pdf: {docs}
         
-        Only use factual information from the pdf to answer the question.
+        Only use factual information from the pdf and aws to answer the question.
         
         If you don't feel like you have enough information to answer the question
         say "Oops🤭! I don't know"
