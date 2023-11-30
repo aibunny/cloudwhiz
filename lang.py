@@ -33,8 +33,8 @@ def create_vector_db()->FAISS:
     documents = loader.load()
     
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=3000,
-        chunk_overlap=500
+        chunk_size=300,
+        chunk_overlap=50
         )
     texts = text_splitter.split_documents(documents)
     
