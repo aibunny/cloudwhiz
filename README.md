@@ -1,8 +1,8 @@
-# CloudWhiz: AWS Assistant Chatbot
+# CloudWhiz: [AWS Assistant Chatbot](https://cloudwhiz.streamlit.app/)
 
  CloudWhiz is a chatbot built with Streamlit, Langchain, Hugging Face's LLM, and Faiss. It serves as a helpful Amazon Web Service assistant, capable of answering questions regarding AWS solutions based on an AWS Solutions Architect PDF.
 
-![preview]()
+![preview](image/preview.png)
 
 ## Getting Started
 
