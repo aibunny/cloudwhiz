@@ -2,7 +2,8 @@ import streamlit as st
 import lang as lg 
 
 
-st.title("💬 Chat with an AWS SOLUTIONS ARCHITECT ASISSTANT") 
+st.title("💬 Cloudwhiz")
+st.markdown("## Chat with an AWS SOLUTIONS ARCHITECT ASISSTANT built by [aibunny](https://www.theaibunny.com/) ")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
