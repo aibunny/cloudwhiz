@@ -79,7 +79,8 @@ def get_reponse_from_query(query):
         If you don't feel like you have enough information to answer the question
         say "Oops🤭! I don't know"
         
-        All answers should be detailed
+        All answers should be detailed and should respond to the questions
+        do not suggest question just generate the answer.
         """          
     )    
 
