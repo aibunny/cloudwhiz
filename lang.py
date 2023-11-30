@@ -33,8 +33,8 @@ def create_vector_db()->FAISS:
     documents = loader.load()
     
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=300,
-        chunk_overlap=50
+        chunk_size=100,
+        chunk_overlap=10
         )
     texts = text_splitter.split_documents(documents)
     
@@ -62,8 +62,8 @@ def get_reponse_from_query(query):
     
     docs = db.similarity_search(query)
     llm = HuggingFaceHub(
-        repo_id="HuggingFaceH4/zephyr-7b-beta",
-        model_kwargs={"max_length": 512}
+        repo_id="openchat/openchat_3.5",
+        # model_kwargs={"max_length": 512}
         )
     prompt = PromptTemplate(
         input_variables=['question', 'docs'],
