@@ -62,7 +62,7 @@ def get_reponse_from_query(query):
     
     docs = db.similarity_search(query)
     llm = HuggingFaceHub(
-        repo_id="openchat/openchat_3.5",
+        repo_id="HuggingFaceH4/zephyr-7b-beta",
         # model_kwargs={"max_length": 512}
         )
     prompt = PromptTemplate(
