@@ -1,7 +1,7 @@
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import LLMChain
-from langchain.llms import HuggingFaceHub
+from langchain.llms.openai import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -61,10 +61,8 @@ def get_reponse_from_query(query):
     
     
     docs = db.similarity_search(query)
-    llm = HuggingFaceHub(
-        repo_id="HuggingFaceH4/zephyr-7b-beta",
-        # model_kwargs={"max_length": 512}
-        )
+    llm=OpenAI(temperature=0)
+    
     prompt = PromptTemplate(
         input_variables=['question', 'docs'],
         template="""
